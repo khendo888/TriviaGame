@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>The Godfather Trivia Game</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+	<!-- JQuery -->
+	<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!--My custom CSS file-->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+ 	
+	<div id="wrapper">
+		<h1><strong>The Godfather Movie Trivia Game</strong></h1>
+		<br>
+		<p class="intro">How well do you know the Godfather movies?<br>The object of the game is to answer all of the trivia questions in two minutes or less.<br>Here's an offer you can't refuse: press START to begin.</p>
+		<p id="goodLuck">Good luck!</p>
+		<br>
+		<div class="buttons">
+        	<button type="button" class="btn btn-primary btn-lg" id="start">START</button>
+        </div>
+		<br>
+      	<div id="timeDisplay">02:00</div>
+		<br>
+      	<div class="hiddenQuestions">
+      		<p class="questOne">1. The first line in "The Godfather" is <em>"I believe in America".</em> Who said these words?</p>
+      		<label class="radio-inline"><input type="radio" name="optradio" value="true">Amerigo Bonasero</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="false">Enzo, the Baker</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="false">Pete Clemenza</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="false">Luca Brasi</label>
+			<br><br>
+			<p class="questTwo">2. In "The Godfather, Part III", Vincent shoots Joey Zasa while in disguise. What was Vincent wearing?</p>
+      		<label class="radio-inline"><input type="radio" name="optradio" value="false">A priest's uniform</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="false">A firefighter's uniform</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="true">A policeman's uniform</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="false">A paramedic's uniform</label>
+			<br><br>
+			<p class="questThree">3. Tom Hagen paid a visit to film director Jack Woltz to persuade him to give a part to the Don's godson, Johnny Fontane. What was the name of Woltz's prize horse?</p>
+      		<label class="radio-inline"><input type="radio" name="optradio" value="false">Tutankhamen</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="true">Khartoum</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="false">Pie-oh-my</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="false">Woltz's Winner</label>
+			<br><br>
+			<p class="questFour">4. How did Connie find out that Carlo had a mistress?</p>
+      		<label class="radio-inline"><input type="radio" name="optradio" value="false">Connie saw Carlo leaving her apartment</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="true">The mistress phoned the house</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="false">Connie overheard Carlo telling some friends</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="false"> Connie found her number in Carlo's pocket</label>
+			<br><br>
+			<p class="questFive">5. After Michael killed Sollozzo and McCluskey, he went to Italy. While there, whose care was Michael under?</p>
+      		<label class="radio-inline"><input type="radio" name="optradio" value="true">Don Tommasino</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="false">Don Gatto</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="false">Signor Vitelli</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="false">Don Barzini</label>
+			<br><br>
+			<p class="questSix">6. Talia Shire starred in all three "Godfather" movies. What part did she play?</p>
+      		<label class="radio-inline"><input type="radio" name="optradio" value="false">Kay Adams</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="true">Connie Corleone</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="false">Mama Corleone</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="false">Appolonia Vitelli-Corleone</label>
+			<br><br>
+			<p class="questSeven">7. John Cazale starred in "The Godfather" and "The Godfather, Part II". Which character did he play?</p>
+      		<label class="radio-inline"><input type="radio" name="optradio" value="false">Tom Hagen</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="false">Rocco Lampone</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="false">Al Neri</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="true">Fredo Corleone</label>
+			<br><br>
+			<p class="questEight">8. When Fredo was teaching Anthony how to fish, he told his secret of how to catch fish every time. What was this secret?</p>
+      		<label class="radio-inline"><input type="radio" name="optradio" value="false">Say Grace</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="false">Say the Our Father</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="true">Say the Hail Mary</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="false">Say a decade of the Rosary</label>
+			<br><br>
+			<p class="questNine">9. Fabrizio was the bodyguard who set the bomb in Michael's car in Sicily in "The Godfather". Mike's other bodyguard's name was Calo.</p>
+      		<label class="radio-inline"><input type="radio" name="optradio" value="true">True</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="false">False</label>
+			<br><br>
+			<p class="questTen">10. Michael's first wife's name was Kay.</p>
+      		<label class="radio-inline"><input type="radio" name="optradio" value="true">True</label>
+			<label class="radio-inline"><input type="radio" name="optradio" value="false">False</label>
+			<br><br><br>
+	 
+      	<div class="buttons">
+        	<button type="button" class="btn btn-primary btn-lg" id="done">DONE</button>
+       	</div>
+
+      
+    </div>
+
+
+
+
+	<!--Start JavaScript-->
+	
+  	<script src="assets/javascript/app.js">
+
+	 $(document).ready(function() {
+}	 	
+</script>
+
+</body>
+</html>
